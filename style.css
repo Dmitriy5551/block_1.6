@@ -144,9 +144,9 @@ button:focus {
         top: -9px; }
 
 .contacts {
-  min-width: 195px;
+  max-width: 200px;
   min-height: 124px;
-  margin: 0 100px 40px 0; }
+  margin: 0 auto 40px 0; }
   .contacts__icons {
     display: flex;
     margin-bottom: 16px; }
@@ -224,7 +224,7 @@ button:focus {
 .wrapper {
   display: flex;
   align-items: center;
-  width: 60%; }
+  width: 68%; }
 
 .action {
   width: 40px; }
@@ -859,6 +859,7 @@ h3 {
   .prices {
     position: relative; }
     .prices__title {
+      padding-left: 24px;
       margin-bottom: 63px; }
     .prices__block {
       flex: 1 0 0; }
@@ -958,15 +959,20 @@ h3 {
     display: none; }
   .prices__table {
     display: block;
+    max-width: 1056px;
+    border-collapse: collapse;
     background-color: #fff;
-    border-spacing: 20px 0;
-    margin-left: 32px; }
+    margin-left: 24px; }
   .prices__title-table {
     background-color: #f8f8f8; }
   .btn-order--hidden {
     position: relative;
     top: 23px;
-    left: 0; } }
+    left: -19px; }
+  .row-table {
+    padding-right: 24px; }
+  .data-table {
+    padding-right: 101px; } }
 
 @media (min-width: 1440px) {
   main {
@@ -1067,6 +1073,10 @@ h3 {
   .brands,
   .technic {
     padding-bottom: 50px; }
+  .prices__title {
+    padding-left: 32px; }
+  .prices__table {
+    margin-left: 32px; }
   .prices-swiper {
     margin: 0 32px 0 32px; }
   .slide-btn {
