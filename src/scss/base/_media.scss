@@ -164,6 +164,7 @@
   .prices {
     position: relative;
     &__title {
+      padding-left: 24px;
       margin-bottom: 63px;
     }
     &__block {
@@ -301,16 +302,13 @@
     display: none;
   }
 
-  .row-table {
-    // display: flex;
-  }
-
   .prices {
     &__table {
       display: block;
+      max-width: 1056px;
+      border-collapse: collapse;
       background-color: #fff;
-      border-spacing: 20px 0;
-      margin-left: 32px;
+      margin-left: 24px;
     }
     &__title-table {
       background-color: #f8f8f8;
@@ -320,7 +318,14 @@
   .btn-order--hidden {
     position: relative;
     top: 23px;
-    left: 0;
+    left: -19px;
+  }
+  .row-table {
+    padding-right: 24px;
+  }
+
+  .data-table {
+    padding-right: 101px;
   }
 }
 
@@ -453,6 +458,14 @@
   .brands,
   .technic {
     padding-bottom: 50px;
+  }
+
+  .prices__title {
+    padding-left: 32px;
+  }
+
+  .prices__table {
+    margin-left: 32px;
   }
 
   .prices-swiper {
