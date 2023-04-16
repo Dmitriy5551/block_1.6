@@ -64,6 +64,7 @@
 
   .services {
     padding-bottom: 40px;
+    padding-bottom: 32px;
     &__wrapper {
       display: flex;
       margin-top: 32px;
@@ -75,7 +76,6 @@
       margin-left: 24px;
     }
     &__descr {
-      width: 19.5rem;
       margin: 0 48px 10px 24px;
     }
     &__descr-further {
@@ -83,6 +83,9 @@
     }
     &__btn {
       margin-left: 25px;
+    }
+    &__logo {
+      width: 360px;
     }
   }
 
@@ -354,10 +357,8 @@
   }
 
   .services {
-    max-height: 33.4375rem;
     padding-top: 42px;
-    padding-right: 25px;
-    padding-bottom: 49px;
+    padding-bottom: 51px;
     margin-right: 0;
     &__text-title {
       margin-left: 35px;
@@ -399,7 +400,7 @@
       margin-right: 8px;
     }
     &__magnifier {
-      margin-right: 9px;
+      margin-right: 19px;
       margin-left: 32px;
     }
     &__menu {
@@ -419,7 +420,6 @@
       padding: 8px 20px;
     }
     &__descr {
-      width: 30.625rem;
       margin-left: 34px;
       margin-bottom: 13px;
       margin-right: 36px;
