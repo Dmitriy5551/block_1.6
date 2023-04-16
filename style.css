@@ -261,6 +261,7 @@ button:focus {
 
 .services {
   padding-top: 24px;
+  padding-bottom: 35px;
   background: #f8f8f8; }
   .services__title {
     display: flex; }
@@ -294,7 +295,7 @@ button:focus {
     margin-top: 24px;
     margin-left: 16px; }
   .services__menu-item {
-    margin-right: 5px; }
+    margin-right: 4px; }
   .services__menu-btn {
     display: block;
     height: 2.5rem;
@@ -320,7 +321,6 @@ button:focus {
   .services__reviews-btn {
     display: none; }
   .services__descr {
-    width: 18rem;
     min-height: 5.625rem;
     margin: 24px 16px 16px;
     font-size: 0.875rem;
@@ -348,13 +348,8 @@ button:focus {
     font-weight: 500;
     letter-spacing: -0.2px;
     color: #1b1c21; }
-  .services__wrapper-logo {
-    width: 100%;
-    height: 100%;
-    padding-bottom: 35px; }
   .services__logo {
-    max-width: 100%;
-    height: 100%; }
+    width: 320px; }
 
 .brands {
   position: relative;
@@ -798,7 +793,8 @@ h3 {
   .action:nth-child(4) {
     margin-left: 22px; }
   .services {
-    padding-bottom: 40px; }
+    padding-bottom: 40px;
+    padding-bottom: 32px; }
     .services__wrapper {
       display: flex;
       margin-top: 32px; }
@@ -807,12 +803,13 @@ h3 {
     .services__menu {
       margin-left: 24px; }
     .services__descr {
-      width: 19.5rem;
       margin: 0 48px 10px 24px; }
     .services__descr-further {
       display: inline; }
     .services__btn {
       margin-left: 25px; }
+    .services__logo {
+      width: 360px; }
   h3 {
     height: 56px;
     padding-left: 24px;
@@ -995,10 +992,8 @@ h3 {
   .header {
     display: none; }
   .services {
-    max-height: 33.4375rem;
     padding-top: 42px;
-    padding-right: 25px;
-    padding-bottom: 49px;
+    padding-bottom: 51px;
     margin-right: 0; }
     .services__text-title {
       margin-left: 35px; }
@@ -1033,7 +1028,7 @@ h3 {
     .services__tools {
       margin-right: 8px; }
     .services__magnifier {
-      margin-right: 9px;
+      margin-right: 19px;
       margin-left: 32px; }
     .services__menu {
       margin-left: 34px;
@@ -1050,7 +1045,6 @@ h3 {
       margin: 2px 0 16px 32px;
       padding: 8px 20px; }
     .services__descr {
-      width: 30.625rem;
       margin-left: 34px;
       margin-bottom: 13px;
       margin-right: 36px; }
