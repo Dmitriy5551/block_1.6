@@ -829,8 +829,6 @@ h3 {
     margin-bottom: 16px; }
   .swiper-indent {
     margin-bottom: 38px; }
-  .swiper-slide:nth-child(3n) {
-    margin-right: 0; }
   .swiper-slide__btn-wrapper {
     width: 224px;
     margin-top: 8px;
@@ -876,7 +874,8 @@ h3 {
     width: auto;
     margin-left: 24px; }
   .swiper-slide {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    margin-right: 24px; }
   .slide-prices {
     position: static;
     transform: none;
@@ -950,9 +949,7 @@ h3 {
   .technic__slide--hidden:nth-child(4) {
     display: block; }
   .swiper-slide:nth-child(3n) {
-    margin-right: 24px; }
-  .swiper-slide:nth-child(4n) {
-    margin-right: 0; } }
+    margin-right: 24px; } }
 
 @media (min-width: 1366px) {
   .prices-swiper {
