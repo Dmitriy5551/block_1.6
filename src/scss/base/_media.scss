@@ -23,7 +23,6 @@
     padding-left: 24px;
     padding-right: 24px;
     &__actions {
-      // margin-left: 227px;
     }
     &__burger {
       position: relative;
@@ -117,9 +116,6 @@
   }
 
   .swiper-slide {
-    &:nth-child(3n) {
-      margin-right: 0;
-    }
     &__btn-wrapper {
       width: 224px;
       margin-top: 8px;
@@ -190,6 +186,7 @@
 
   .swiper-slide {
     margin-bottom: 0;
+    margin-right: 24px;
   }
   .slide-prices {
     position: static;
@@ -290,10 +287,6 @@
 
   .swiper-slide:nth-child(3n) {
     margin-right: 24px;
-  }
-
-  .swiper-slide:nth-child(4n) {
-    margin-right: 0;
   }
 }
 
