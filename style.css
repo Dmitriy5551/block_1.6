@@ -351,6 +351,9 @@ button:focus {
   .services__logo {
     width: 320px; }
 
+.rotate {
+  transform: rotate(180deg); }
+
 .brands {
   position: relative;
   min-width: 320px;
