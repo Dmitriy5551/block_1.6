@@ -108,16 +108,16 @@ servicesBtn.addEventListener('click', readMore)
 let swiper
 const mediaQuery = '(max-width: 768px)'
 const mediaQueryList = window.matchMedia(mediaQuery)
-swiper = new Swiper('.swiper', {
-  direction: 'horizontal',
-  loop: false,
-  spaceBetween: 16,
+// swiper = new Swiper('.swiper', {
+//   direction: 'horizontal',
+//   loop: false,
+//   spaceBetween: 16,
 
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true
-  }
-})
+//   pagination: {
+//     el: '.swiper-pagination',
+//     clickable: true
+//   }
+// })
 
 mediaQueryList.addEventListener('change', (event) => {
   if (event.matches && !swiper) {
