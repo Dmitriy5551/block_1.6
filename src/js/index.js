@@ -22,108 +22,13 @@ const readMore = () => {
 
 servicesBtn.addEventListener('click', readMore)
 
-// const breakpointSwiper = window.matchMedia('(max-width: 760px)')
-// const swiperContainer = document.querySelector('.swiper')
-// function createSlider() {
-//   if (
-//     breakpointSwiper.matches &&
-//     !swiperContainer.classList.contains('swiper-initialized')
-//   ) {
-//     sliders = new Swiper('.swiper', {
-//       modules: [Navigation, Pagination],
-//       direction: 'horizontal',
-//       spaceBetween: 15,
-//       slidesPerView: 'auto',
-//       breakpoints: {
-//         700: {
-//           slidesPerView: 4,
-//           spaceBetween: 10,
-//           enabled: false
-//         }
-//       },
-//       pagination: {
-//         el: '.swiper-pagination',
-//         clickable: true
-//       }
-//     })
-//   } else {
-//     if (
-//       swiperContainer.classList.contains('swiper-initialized') &&
-//       !sliders[0].destroyed
-//     ) {
-//       for (let slider of sliders) {
-//         slider.destroy()
-//         console.log('hfwyuevhbfcsof')
-//       }
-//     }
-//   }
-// }
-// createSlider()
-
-// breakpointSwiper.addEventListener('change', function (event) {
-//   createSlider()
-// })
-
-// let swiper
-// const swiperCheck = document.querySelector('.swiper')
-// const mediaQuery = '(max-width: 768px)'
-// // const mediaQueryList = window.matchMedia(mediaQuery)
-
-// // let sliders
-// // const breakpointSwiper = window.matchMedia("(max-width: 760px)")
-
-// function createSlider() {
-//   if (
-//     mediaQuery.matches &&
-//     !swiperCheck.classList.contains('swiper-initialized')
-//   ) {
-//     swiper = new Swiper('.swiper', {
-//       direction: 'horizontal',
-//       loop: false,
-//       spaceBetween: 16,
-
-//       pagination: {
-//         el: '.swiper-pagination',
-//         clickable: true
-//       }
-//     })
-//   } else {
-//     if (
-//       swiperCheck.classList.contains('swiper-initialized') &&
-//       !sliders[0].destroyed
-//     ) {
-//       for (let slider of sliders) {
-//         slider.destroy()
-//       }
-//     }
-//   }
-// }
-
-// createSlider()
-
-// mediaQuery.addEventListener('change', function (event) {
-//   createSlider()
-// })
-
-let swiper
-const mediaQuery = '(max-width: 768px)'
-const mediaQueryList = window.matchMedia(mediaQuery)
-// swiper = new Swiper('.swiper', {
-//   direction: 'horizontal',
-//   loop: false,
-//   spaceBetween: 16,
-
-//   pagination: {
-//     el: '.swiper-pagination',
-//     clickable: true
-//   }
-// })
-
-mediaQueryList.addEventListener('change', (event) => {
-  if (event.matches && !swiper) {
-    swiper = new Swiper('.swiper', {
+let sliders
+const breakpointSwiper = window.matchMedia('(max-width: 768px)')
+const swiper = body.querySelector('.swiper')
+function createSlider() {
+  if (breakpointSwiper.matches) {
+    sliders = new Swiper('.swiper', {
       direction: 'horizontal',
-      loop: false,
       spaceBetween: 16,
 
       pagination: {
@@ -132,12 +37,17 @@ mediaQueryList.addEventListener('change', (event) => {
       }
     })
   } else {
-    if (swiperCheck.classList.contains('swiper-initialized')) {
-      swiper.forEach((swiperInstance) => swiperInstance.disable())
-      swiper.forEach((swiperInstance) => swiperInstance.destroy(false, true))
-      swiper = null
+    if (swiper.classList.contains('swiper-initialized')) {
+      for (let slider of sliders) {
+        slider.destroy()
+      }
     }
   }
+}
+createSlider()
+
+breakpointSwiper.addEventListener('change', function () {
+  createSlider()
 })
 
 const brands = body.querySelector('.brands')
