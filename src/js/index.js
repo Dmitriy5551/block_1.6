@@ -22,8 +22,61 @@ const readMore = () => {
 
 servicesBtn.addEventListener('click', readMore)
 
-// function toggleSwiper() {
-//   if (window.matchMedia('(max-width: 768px)') && !swiper) {
+// const breakpointSwiper = window.matchMedia('(max-width: 760px)')
+// const swiperContainer = document.querySelector('.swiper')
+// function createSlider() {
+//   if (
+//     breakpointSwiper.matches &&
+//     !swiperContainer.classList.contains('swiper-initialized')
+//   ) {
+//     sliders = new Swiper('.swiper', {
+//       modules: [Navigation, Pagination],
+//       direction: 'horizontal',
+//       spaceBetween: 15,
+//       slidesPerView: 'auto',
+//       breakpoints: {
+//         700: {
+//           slidesPerView: 4,
+//           spaceBetween: 10,
+//           enabled: false
+//         }
+//       },
+//       pagination: {
+//         el: '.swiper-pagination',
+//         clickable: true
+//       }
+//     })
+//   } else {
+//     if (
+//       swiperContainer.classList.contains('swiper-initialized') &&
+//       !sliders[0].destroyed
+//     ) {
+//       for (let slider of sliders) {
+//         slider.destroy()
+//         console.log('hfwyuevhbfcsof')
+//       }
+//     }
+//   }
+// }
+// createSlider()
+
+// breakpointSwiper.addEventListener('change', function (event) {
+//   createSlider()
+// })
+
+// let swiper
+// const swiperCheck = document.querySelector('.swiper')
+// const mediaQuery = '(max-width: 768px)'
+// // const mediaQueryList = window.matchMedia(mediaQuery)
+
+// // let sliders
+// // const breakpointSwiper = window.matchMedia("(max-width: 760px)")
+
+// function createSlider() {
+//   if (
+//     mediaQuery.matches &&
+//     !swiperCheck.classList.contains('swiper-initialized')
+//   ) {
 //     swiper = new Swiper('.swiper', {
 //       direction: 'horizontal',
 //       loop: false,
@@ -35,19 +88,26 @@ servicesBtn.addEventListener('click', readMore)
 //       }
 //     })
 //   } else {
-//     swiper.forEach((swiperInstance) => swiperInstance.disable())
-//     swiper.forEach((swiperInstance) => swiperInstance.destroy(false, true))
-//     swiper = null
+//     if (
+//       swiperCheck.classList.contains('swiper-initialized') &&
+//       !sliders[0].destroyed
+//     ) {
+//       for (let slider of sliders) {
+//         slider.destroy()
+//       }
+//     }
 //   }
 // }
 
-// toggleSwiper()
-// window.addEventListener('resize', toggleSwiper)
+// createSlider()
+
+// mediaQuery.addEventListener('change', function (event) {
+//   createSlider()
+// })
 
 let swiper
 const mediaQuery = '(max-width: 768px)'
 const mediaQueryList = window.matchMedia(mediaQuery)
-
 swiper = new Swiper('.swiper', {
   direction: 'horizontal',
   loop: false,
@@ -72,9 +132,11 @@ mediaQueryList.addEventListener('change', (event) => {
       }
     })
   } else {
-    swiper.forEach((swiperInstance) => swiperInstance.disable())
-    swiper.forEach((swiperInstance) => swiperInstance.destroy(false, true))
-    swiper = null
+    if (swiperCheck.classList.contains('swiper-initialized')) {
+      swiper.forEach((swiperInstance) => swiperInstance.disable())
+      swiper.forEach((swiperInstance) => swiperInstance.destroy(false, true))
+      swiper = null
+    }
   }
 })
 
