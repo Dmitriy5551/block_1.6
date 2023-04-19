@@ -46,9 +46,7 @@ function createSlider() {
 }
 createSlider()
 
-breakpointSwiper.addEventListener('change', function () {
-  createSlider()
-})
+breakpointSwiper.addEventListener('change', createSlider)
 
 const brands = body.querySelector('.brands')
 const swipeWrapper = brands.querySelector('.swiper-wrapper')
